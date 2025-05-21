@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('greenRange').addEventListener('input', updateRGBPreview);
     document.getElementById('blueRange').addEventListener('input', updateRGBPreview);
 
-    // Si tienes botón de aplicar color global, agrega el listener aquí:
     const applyBtn = document.getElementById('apply-global-rgb');
     if (applyBtn) {
         applyBtn.addEventListener('click', controlRGB);
