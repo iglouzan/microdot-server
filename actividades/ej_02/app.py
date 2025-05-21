@@ -34,7 +34,6 @@ async def base_js(request):
 async def script_js(request):
     return send_file('scripts/script.js')
 
-# Si necesitas la imagen, cambia la ruta, no uses '/'
 @app.get('/static/image.jpg')
 async def image(request):
     return send_file('/static/image.jpg', max_age=3600)
