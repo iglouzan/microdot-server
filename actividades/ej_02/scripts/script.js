@@ -2,12 +2,10 @@ function led_toggle(led){
     fetch(`/led/toggle/${led}`);
 }
 
-// Solo agregamos listeners a los botones de LED individuales
 document.addEventListener('DOMContentLoaded', function () {
-    // Botones de LED individuales (asumiendo tienen clase "led-button")
     document.querySelectorAll(".led-button").forEach(button => {
         button.addEventListener("click", (e) => {
-            led_toggle(e.target.dataset.ledId); // Mejor usar data-led-id
+            led_toggle(e.target.dataset.ledId);
         });
     });
 
@@ -39,6 +37,5 @@ function updateRGBPreview() {
     document.getElementById('redValue').innerText = r;
     document.getElementById('greenValue').innerText = g;
     document.getElementById('blueValue').innerText = b;
-    // ¡El valor debe ir en backticks!
     document.getElementById('rgb-global-preview').style.background = `rgb(${r},${g},${b})`;
 }
