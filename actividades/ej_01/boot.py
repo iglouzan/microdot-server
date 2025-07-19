@@ -1,3 +1,4 @@
+# Configuracion inicial
 def connect_to(ssid : "Cooperadora_Alumnos", passwd : "") -> None:
 
     """Conecta el microcontrolador a la red indicada.
@@ -25,4 +26,4 @@ def connect_to(ssid : "Cooperadora_Alumnos", passwd : "") -> None:
     ip = sta_if.ifconfig()[0]
     print("\nConectado. Dirección IP:", ip)
     
-connect_to("Cooperadora Alumnos", "")
+connect_to("Cooperadora Alumnos", "")
